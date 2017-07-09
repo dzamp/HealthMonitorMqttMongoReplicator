@@ -1,5 +1,7 @@
+replication.iml
 .idea/
 Sending*/
 logs/
 target/ 
 MqttReplicator.iml
+resources/*.properties
