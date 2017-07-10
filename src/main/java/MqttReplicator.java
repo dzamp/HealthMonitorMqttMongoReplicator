@@ -23,7 +23,7 @@ public class MqttReplicator implements MqttCallback {
         PropertyFileLoader propertyFileLoader = new PropertyFileLoader();
         MY_IP = propertyFileLoader.getProperty("MY_IP");
         try {
-            client = new MqttClient("tcp://"+ propertyFileLoader.getProperty("broker_ip")+":1883", "Sending" + Math.random());
+            client = new MqttClient("tcp://localhost:1883", "Sending" + Math.random());
             client.connect();
             client.setCallback(this);
             client.subscribe(REPLICATION_TOPIC , 1);
